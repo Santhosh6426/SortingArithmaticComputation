@@ -9,3 +9,5 @@ x=$(( a * b + c ))
 echo "$a * $b + $c = $x"
 y=`awk 'BEGIN{printf("%0.2f", '$c' + '$a' / '$b' )}'`
 echo "$c + $a / $b = $y"
+z=$(( $a % $b + $c ))
+echo "$a % $b + $c = $z"
