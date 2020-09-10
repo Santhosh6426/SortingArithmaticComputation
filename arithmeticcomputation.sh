@@ -40,3 +40,18 @@ do
 	done
 done
 echo "Array sorted in Descending order : ${arr[@]}"
+for (( i=0; i<$temp; i++ ))
+do
+        for (( j=$(( $i + 1 )); j<=$temp; j++ ))
+        do
+                if [[ ${arr[$i]} -lt ${arr[$j]} ]]
+                then
+                        continue
+                else
+                        temp2=${arr[$i]}
+                        arr[$i]=${arr[$j]}
+                        arr[$j]=$temp2
+                fi
+        done
+done
+echo "Array sorted in Ascending order : ${arr[@]}"
