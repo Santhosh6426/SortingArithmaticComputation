@@ -11,3 +11,9 @@ y=`awk 'BEGIN{printf("%0.2f", '$c' + '$a' / '$b' )}'`
 echo "$c + $a / $b = $y"
 z=$(( $a % $b + $c ))
 echo "$a % $b + $c = $z"
+declare -A compute
+compute[first]=$w
+compute[second]=$x
+compute[third]=$y
+compute[fourth]=$z
+echo -e "keys:${!compute[@]}\nValues:${compute[@]}"
