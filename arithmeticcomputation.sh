@@ -17,3 +17,10 @@ compute[second]=$x
 compute[third]=$y
 compute[fourth]=$z
 echo -e "keys:${!compute[@]}\nValues:${compute[@]}"
+m=0
+for val in ${compute[@]}
+do
+	arr[$m]=$val
+	m=$(( $m + 1 ))
+done
+echo "Array:${arr[@]}"
